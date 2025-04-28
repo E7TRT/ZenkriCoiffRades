@@ -1,0 +1,52 @@
+<h1 class="title">Zenkri Coiff Rades</h1>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap');
+    
+    .title {
+        font-family: 'Dancing Script', cursive, 'Playfair Display', serif;
+        font-size: 2.8rem;
+        color: #fd264e;
+        margin: 0 0 10px 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+        display: inline-block;
+        padding: 0 20px;
+        animation: titleGlow 3s infinite alternate;
+    }
+    
+    .title::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #fd264e, transparent);
+        animation: borderFlow 4s infinite linear;
+    }
+    
+    .title::after {
+        content: "✂️";
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        font-size: 1.5rem;
+        animation: scissorsFloat 2s infinite ease-in-out;
+    }
+    
+    @keyframes titleGlow {
+        0% { text-shadow: 0 0 5px rgba(253, 38, 78, 0.3); }
+        100% { text-shadow: 0 0 15px rgba(253, 38, 78, 0.6); }
+    }
+    
+    @keyframes borderFlow {
+        0% { background-position: -100% 0; }
+        100% { background-position: 100% 0; }
+    }
+    
+    @keyframes scissorsFloat {
+        0%, 100% { transform: translateY(0) rotate(-15deg); }
+        50% { transform: translateY(-10px) rotate(15deg); }
+    }
+</style>
